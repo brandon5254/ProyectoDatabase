@@ -1,0 +1,80 @@
+﻿using ProyectoCrudMongoDB.Data;
+using Microsoft.AspNetCore.Mvc;
+
+namespace ProyectoCrudMongoDB.Controllers
+{
+    public class LoginController : Controller
+    {
+        private readonly IHttpContextAccessor _contextAccessor;
+        public LoginController(IHttpContextAccessor contextAccessor)
+        {
+            _contextAccessor = contextAccessor;
+        }
+
+        public IActionResult Index()
+        {
+
+            return View();
+        }
+
+
+
+
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> Index(string email, string password)
+        {
+            TempData["name"] = email;
+
+            if (email != null && password != null)
+            {
+                var username = email;
+
+                try
+                {
+                    DbUsers db = new DbUsers();
+                    var result = await db.FindUserByEmail(username, email, password);
+                    if (result)
+                    {
+                        HttpContext.Session.SetString("User", email);
+                        Console.WriteLine(HttpContext.Session.GetString("User"));
+                        if (HttpContext.Session.IsAvailable && HttpContext.Session.GetString("User").Any())
+                        {
+                            ViewBag.status = true;
+
+                            return RedirectToAction("Index", "Home");
+                        }
+                        else
+                        {
+                            ViewBag.message = "Login Failed!!";
+                        }
+                    }
+
+                    else
+                    {
+                        //   Console.WriteLine(ViewBag.user);
+                        ViewBag.status = false;
+                        ViewBag.message = "User not found";
+                        return View();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    return View(e);
+                }
+            }
+
+            ViewBag.success = false;
+            ViewBag.message = "Both Email and Password Required";
+
+            return View();
+        }
+
+
+    }
+
+
+}
