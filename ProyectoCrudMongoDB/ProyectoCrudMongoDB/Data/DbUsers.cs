@@ -5,7 +5,7 @@ namespace ProyectoCrudMongoDB.Data
 {
     public class DbUsers
     {
-        private const string connectionString = "mongodb+srv://brandon:12345@cluster0.sb0difv.mongodb.net/?retryWrites=true&w=majority";
+        private const string connectionString = "mongodb+srv://brandont:12345@cluster0.ps2a2jv.mongodb.net/?retryWrites=true&w=majority";
         private const string dbName = "UserData";
         private const string userCollection = "Users";
 

@@ -5,6 +5,22 @@
       "PackagePath": "staticwebassets\\ProyectoCrudMongoDB.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\GitHub\\ProyectoDatabase\\ProyectoCrudMongoDB\\ProyectoCrudMongoDB\\wwwroot\\css\\Data.css",
+      "PackagePath": "staticwebassets\\css\\Data.css"
+    },
+    {
+      "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\GitHub\\ProyectoDatabase\\ProyectoCrudMongoDB\\ProyectoCrudMongoDB\\wwwroot\\css\\Home.css",
+      "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
+      "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\GitHub\\ProyectoDatabase\\ProyectoCrudMongoDB\\ProyectoCrudMongoDB\\wwwroot\\css\\SignUp.css",
+      "PackagePath": "staticwebassets\\css\\SignUp.css"
+    },
+    {
+      "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\GitHub\\ProyectoDatabase\\ProyectoCrudMongoDB\\ProyectoCrudMongoDB\\wwwroot\\css\\logincss.css",
+      "PackagePath": "staticwebassets\\css\\logincss.css"
+    },
+    {
       "Id": "C:\\Users\\brand\\OneDrive\\Documentos\\GitHub\\ProyectoDatabase\\ProyectoCrudMongoDB\\ProyectoCrudMongoDB\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
